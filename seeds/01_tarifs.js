@@ -28,12 +28,12 @@ const defaultIcındekilerAdimlar = [
 exports.seed = async function(knex) {
   // Deletes ALL existing entries
   await knex('tarif').truncate()
-  await knex('adim').truncate()
+  await knex('adimlar').truncate()
   await knex('icindekiler').truncate()
-  await knex('icindekiler_adim').truncate()
+  await knex('icindekiler_adimlar').truncate()
 
   await knex('tarif').insert(defaultTarif);
-  await knex('adim').insert(defaultAdim);
+  await knex('adimlar').insert(defaultAdim);
   await knex('icindekiler').insert(defaultIcındekiler);
-  await knex('icindekiler_adim').insert(defaultIcındekilerAdimlar);
+  await knex('icindekiler_adimlar').insert(defaultIcındekilerAdimlar);
 };
